@@ -10,8 +10,8 @@ public class DynamicDropdown {
   public static void main(String[] args) throws InterruptedException {
 
     WebDriver driver = new ChromeDriver();
-    driver.manage().window().maximize();
     
+    driver.manage().window().maximize();
     driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
     
     //  //a[@value='MAA']

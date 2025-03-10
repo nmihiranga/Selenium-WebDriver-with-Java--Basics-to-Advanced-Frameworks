@@ -30,6 +30,19 @@ public class UpdatedDropdown {
 
     System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
     Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+    System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled());
+    System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
+
+    driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+    System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
+
+    if(driver.findElement(By.id("Div1")).getDomAttribute("style").contains("1")) {
+      System.out.println("its enabled");
+      Assert.assertTrue(true);
+    } else {
+      Assert.assertTrue(false);
+    }
     
   }
 }
